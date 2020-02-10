@@ -1,0 +1,9 @@
+#!/bin/bash
+
+docker run -i \
+  --mount type=bind,source=/home/jing/workspace/prestolabs/navi,destination=/root/navi \
+  --mount type=bind,source=/remote,destination=/remote \
+  --mount type=bind,source=/home/jing/workspace/data,destination=/root/data \
+  --mount type=bind,source=/home/jing/workspace/prestolabs/scripts,destination=/root/scripts \
+  -t d183d33d2888 bash
+
